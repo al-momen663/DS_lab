@@ -39,7 +39,7 @@ int main()
 	}
 
 	// Display the status of the linked list
-	temp = first;
+	temp = first; // traversing the node
 	printf("\nStatus of the linked list is\n");
 	while (temp != NULL)
 	{
