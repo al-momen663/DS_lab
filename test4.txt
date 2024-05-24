@@ -1,0 +1,43 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+// Define the structure for student records
+struct Student {
+    int roll;
+    char name[50];
+    char course[50];
+};
+
+int main() {
+    struct Student* head = NULL; // Initialize an empty linked list
+
+    // Create a new student record
+    struct Student* newStudent = (struct Student*)malloc(sizeof(struct Student));
+    newStudent->roll = 101;
+    strcpy(newStudent->name, "Alice");
+    strcpy(newStudent->course, "Computer Science");
+    newStudent->next = NULL;
+    head = newStudent;
+
+    // Add more student records (you can modify this part)
+    // ...
+
+    // Display all student records
+    printf("Student records:\n");
+    struct Student* current = head;
+    while (current != NULL) {
+        printf("Roll: %d, Name: %s, Course: %s\n", current->roll, current->name, current->course);
+        current = current->next;
+    }
+
+    // Clean up memory (free allocated nodes)
+    current = head;
+    while (current != NULL) {
+        struct Student* temp = current;
+        current = current->next;
+        free(temp);
+    }
+
+    return 0;
+}
