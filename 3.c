@@ -22,11 +22,11 @@ int main()
 	students[numStudents].marks = 78.0;
 	numStudents++;
 	students[numStudents].roll = 3;
-	strcpy(students[numStudents].firstName, "Shad");
+	strcpy(students[numStudents].firstName, "pias");
 	students[numStudents].marks = 78.0;
 	numStudents++;
 	students[numStudents].roll = 4;
-	strcpy(students[numStudents].firstName, "Shad");
+	strcpy(students[numStudents].firstName, "nirob");
 	students[numStudents].marks = 78.0;
 
 	printf("Initial student records:\n");

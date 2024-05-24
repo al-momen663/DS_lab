@@ -27,7 +27,7 @@ int main()
 	// Enter the student data for each node
 	head->ID = 101;
 	strcpy(head->name, "Momen");
-	strcpy(head->course, "Computer Science");
+	strcpy(head->course, "Computer");
 
 	second->ID = 102;
 	strcpy(second->name, "shad");
