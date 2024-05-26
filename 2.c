@@ -2,42 +2,31 @@
  based on their duration. Also, the application must be able to find out a song based on the duration.*/
 #include <stdio.h>
 
-void swap(int *song, int i, int j)
+int main()
 {
-	int temp = song[i];
-	song[i] = song[j];
-	song[j] = temp;
-}
+	int song[] = {2, 3, 5, 8, 9, 10};
+	int size = sizeof(song) / sizeof(song[0]);
 
-void SongSort(int song[], int n)
-{
-	for (int i = 0; i < n - 1; i++)
+	// Bubble sort implementation
+	for (int i = 0; i < size - 1; i++)
 	{
-		for (int j = 0; j < n - i - 1; j++)
+		for (int j = 0; j < size - i - 1; j++)
 		{
 			if (song[j] > song[j + 1])
 			{
-				swap(song, j, j + 1);
+				int temp = song[j];
+				song[j] = song[j + 1];
+				song[j + 1] = temp;
 			}
 		}
 	}
-}
 
-void printSong(int song[], int size)
-{
+	printf("Sorted playlist (duration in seconds): ");
 	for (int i = 0; i < size; i++)
 	{
 		printf("%d ", song[i]);
 	}
 	printf("\n");
-}
-int main()
-{
-	int song[] = {2, 3, 5, 8, 9, 10};
-	int size = sizeof(song) / sizeof(song[0]);
-	SongSort(song, size);
-	printf("Sorted playlist (duration in seconds): ");
-	printSong(song, size);
 
 	int Duration;
 
@@ -57,4 +46,6 @@ int main()
 	{
 		printf("No song found with duration %d seconds.\n", Duration);
 	}
+
+	return 0;
 }
