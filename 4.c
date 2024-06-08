@@ -24,7 +24,6 @@ int main()
 	fourth = (struct node *)malloc(sizeof(struct node));
 	fifth = (struct node *)malloc(sizeof(struct node));
 
-	// Enter the student data for each node
 	head->ID = 101;
 	strcpy(head->name, "Momen");
 	strcpy(head->course, "Computer");
@@ -41,7 +40,6 @@ int main()
 	strcpy(fourth->name, "akash");
 	strcpy(fourth->course, "Chemistry");
 
-	// Link the nodes
 	head->ptr = second;
 	second->ptr = third;
 	third->ptr = fourth;

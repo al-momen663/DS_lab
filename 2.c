@@ -7,7 +7,6 @@ int main()
 	int song[] = {2, 3, 5, 8, 9, 10};
 	int size = sizeof(song) / sizeof(song[0]);
 
-	// Bubble sort implementation
 	for (int i = 0; i < size - 1; i++)
 	{
 		for (int j = 0; j < size - i - 1; j++)
