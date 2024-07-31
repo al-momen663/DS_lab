@@ -87,19 +87,10 @@ int main()
 	Node *current = head;
 	while (current != NULL)
 	{
-		printf("%c <-> ", current->data);
+		printf("%c ", current->data);
 		current = current->next;
 	}
 	printf("\n");
-
-	// Free the allocated memory
-	current = head;
-	while (current != NULL)
-	{
-		Node *next = current->next;
-		free(current);
-		current = next;
-	}
 
 	return 0;
 }
